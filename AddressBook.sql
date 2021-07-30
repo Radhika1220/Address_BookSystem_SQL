@@ -37,3 +37,7 @@ select * from Address_Book_Table;
 --------UC5---------
 
 delete from Address_Book_Table where FirstName='Sakthi' and LastName='Rajan';
+
+---------UC6-------------
+
+Select FirstName,LastName from Address_Book_Table where City='Chennai' or StateName='TamilNadu';
