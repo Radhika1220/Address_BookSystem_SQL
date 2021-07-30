@@ -41,3 +41,6 @@ delete from Address_Book_Table where FirstName='Sakthi' and LastName='Rajan';
 ---------UC6-------------
 
 Select FirstName,LastName from Address_Book_Table where City='Chennai' or StateName='TamilNadu';
+
+-----------UC7------------
+Select Count(*) As Count,StateName,City from Address_Book_Table group by StateName,City;
