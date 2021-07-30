@@ -23,6 +23,8 @@ EmailId varchar(100)
 Insert into Address_Book_Table values('Logeswari','Jaisankar','Gandhi Bazaar','Bangalore','Karanataka',60048,8548712794,'logi12@gmail.com'),
 ('Vijay','Kumar','Adyar Flyover','Chennai','TamilNadu',60015,987548512,'vijay123@yahoo.com');
 Insert into Address_Book_Table values('Sakthi','Rajan','Bharathi Dasan Nagar','Karaikal','TamilNadu',609602,9840781547,'sakthiraj@gmail.com');
+Insert into Address_Book_Table values('Arun','Vijay','Andheri Versova Road','Mumbai','Maharashtra',605842,9840781431,'arun.vijay@gmail.com');
+Insert into Address_Book_Table values('Prakash','Raj','Fort Road','Mumbai','Maharashtra',604871,8945127834,'praksah@yahoo.com');
 
 -------------UC4--------------
 
@@ -44,3 +46,7 @@ Select FirstName,LastName from Address_Book_Table where City='Chennai' or StateN
 
 -----------UC7------------
 Select Count(*) As Count,StateName,City from Address_Book_Table group by StateName,City;
+
+---------UC8------------
+
+select FirstName,LastName from Address_Book_Table where City='Mumbai' order by FirstName;
