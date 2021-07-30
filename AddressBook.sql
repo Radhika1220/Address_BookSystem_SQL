@@ -23,3 +23,13 @@ EmailId varchar(100)
 Insert into Address_Book_Table values('Logeswari','Jaisankar','Gandhi Bazaar','Bangalore','Karanataka',60048,8548712794,'logi12@gmail.com'),
 ('Vijay','Kumar','Adyar Flyover','Chennai','TamilNadu',60015,987548512,'vijay123@yahoo.com');
 Insert into Address_Book_Table values('Sakthi','Rajan','Bharathi Dasan Nagar','Karaikal','TamilNadu',609602,9840781547,'sakthiraj@gmail.com');
+
+-------------UC4--------------
+
+update Address_Book_Table set Phonenum=7845712874 where Address='Gandhi Bazaar';
+
+update Address_Book_Table set EmailId='vijay.kumar23@gmail.com' where FirstName='Vijay';
+
+update Address_Book_Table set EmailId='logi123@gmail.com' where FirstName='Logeswari';
+
+select * from Address_Book_Table;
