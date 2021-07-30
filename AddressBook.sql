@@ -1,10 +1,10 @@
-----------UC1--------------
+----------UC1-->Creating Database------------ 
 
 create database AddressBookSystem
 
 use AddressBookSystem;
 
--------------UC2------------------
+-------------UC2---->Create table------------------
 
 create table Address_Book_Table
 (
@@ -18,7 +18,7 @@ Phonenum bigint,
 EmailId varchar(100)
 );
 
-----------UC3-----------
+----------UC3----->Insert into tables using fields--------
 
 Insert into Address_Book_Table values('Logeswari','Jaisankar','Gandhi Bazaar','Bangalore','Karanataka',60048,8548712794,'logi12@gmail.com'),
 ('Vijay','Kumar','Adyar Flyover','Chennai','TamilNadu',60015,987548512,'vijay123@yahoo.com');
@@ -26,9 +26,9 @@ Insert into Address_Book_Table values('Sakthi','Rajan','Bharathi Dasan Nagar','K
 Insert into Address_Book_Table values('Arun','Vijay','Andheri Versova Road','Mumbai','Maharashtra',605842,9840781431,'arun.vijay@gmail.com');
 Insert into Address_Book_Table values('Prakash','Raj','Fort Road','Mumbai','Maharashtra',604871,8945127834,'praksah@yahoo.com');
 
--------------UC4--------------
+-------------UC4---->edit existing contact person using person name----------
 
-update Address_Book_Table set Phonenum=7845712874 where Address='Gandhi Bazaar';
+update Address_Book_Table set Phonenum=7845712874 where FirstName='Sakthi';
 
 update Address_Book_Table set EmailId='vijay.kumar23@gmail.com' where FirstName='Vijay';
 
@@ -36,22 +36,22 @@ update Address_Book_Table set EmailId='logi123@gmail.com' where FirstName='Loges
 
 select * from Address_Book_Table;
 
---------UC5---------
+--------UC5---->Delete a contact using perosn name-----
 
 delete from Address_Book_Table where FirstName='Sakthi' and LastName='Rajan';
 
----------UC6-------------
+---------UC6---->Retrieve data belongs to state or city---------
 
 Select FirstName,LastName from Address_Book_Table where City='Chennai' or StateName='TamilNadu';
 
------------UC7------------
+-----------UC7---->Count of state and city--------
 Select Count(*) As Count,StateName,City from Address_Book_Table group by StateName,City;
 
----------UC8------------
+---------UC8---->Sort the name alphabetically using city name--------
 
 select FirstName,LastName from Address_Book_Table where City='Mumbai' order by FirstName;
 
-----------UC9---------------
+----------UC9---->Add the new columns and adding the address book name and type-----------
 alter table Address_Book_Table
 add AddressBookName varchar(50),
 RelationType varchar(50)
@@ -69,3 +69,6 @@ where ZipCode=60048;
 update Address_Book_Table
 set AddressBookName='TeamLead',RelationType='Profession'
 where Phonenum=9840781431
+
+---------UC10---->Count of persons based on realtion type-----
+Select count(*)as CountType, RelationType  from Address_Book_Table group by RelationType;
