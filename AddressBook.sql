@@ -33,3 +33,7 @@ update Address_Book_Table set EmailId='vijay.kumar23@gmail.com' where FirstName=
 update Address_Book_Table set EmailId='logi123@gmail.com' where FirstName='Logeswari';
 
 select * from Address_Book_Table;
+
+--------UC5---------
+
+delete from Address_Book_Table where FirstName='Sakthi' and LastName='Rajan';
